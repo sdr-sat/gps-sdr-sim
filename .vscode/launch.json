@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(gdb) Launch on WSL",
+            "type": "cppdbg",
+            "request": "launch",
+            "preLaunchTask": "Build gps-sdr-sim",
+            "program": "${workspaceFolder}/gps-sdr-sim", // WSLでは.exe がない
+            "args": [
+                "-e",
+                "brdc0010.22n", // デフォルトのephemerisのファイルを直接指定
+                "-l",
+                "35.6,139.7,100"
+            ],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "/usr/bin/gdb", // LinuxでのGDBのパス
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}

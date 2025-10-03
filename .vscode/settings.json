@@ -1,0 +1,24 @@
+{
+  // C/C++言語固有の設定
+  "C_Cpp.default.compilerPath": "/usr/bin/gcc", // WSL内のコンパイラパスを指定
+  "C_Cpp.intelliSenseEngine": "default",
+
+  // エディタ全般の設定
+  "editor.tabSize": 4, // タブのサイズをスペース4つ分に
+  "editor.insertSpaces": true, // Tabキーでスペースを挿入
+  "editor.renderWhitespace": "boundary", // 行頭・行末以外のスペースを可視化
+  "editor.formatOnSave": true, // ファイル保存時に自動でフォーマット
+
+  // ファイル関連の設定
+  "files.encoding": "utf8", // ファイルの文字コードをUTF-8に
+  "files.trimTrailingWhitespace": true, // 保存時に行末の不要なスペースを削除
+  "files.insertFinalNewline": true, // 保存時にファイル末尾に改行を自動で追加
+
+  // エクスプローラー（ファイル一覧）から不要なファイルを非表示にする設定
+  "files.exclude": {
+    "**/.git": true,
+    "**/*.o": true, // オブジェクトファイル
+    "**/*.out": true,
+    "**/gps-sdr-sim": true // 実行ファイル（.exeなし）
+  }
+}

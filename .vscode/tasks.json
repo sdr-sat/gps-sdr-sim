@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+        "label": "Build gps-sdr-sim",
+        "type": "shell",
+        "command": "gcc",
+        "args": [
+            "-g",
+            "gpssim.c",
+            "getopt.c",
+            "-lm",
+            "-o",
+            "gps-sdr-sim"
+        ],
+        "group": {
+            "kind": "build",
+            "isDefault": true
+        },
+        "problemMatcher": [
+            "$gcc"
+        ],
+        "detail": "Build the gps-sdr-sim executable."
+    }
+]
+}
